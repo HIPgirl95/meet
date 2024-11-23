@@ -28,7 +28,7 @@
     <script type="text/javascript">
       const getAuthUrlButton = document.getElementById("getAuthUrlButton");
       const resultElement = document.getElementById("result");
-      const resultLink = document.getElementById(authURL);
+      const resultLink = document.getElementById("authURL");
       const getAuthURL =
         "https://blduih5lmjnk554ptv3xqzbarm0mdtvn.lambda-url.us-east-2.on.aws/";
 
@@ -39,7 +39,7 @@
           })
           .then(function (json) {
             const result = JSON.stringify(json);
-            const authUrl = JSON.parse(result);
+            const { authUrl } = JSON.parse(result);
             resultElement.innerText = result;
             resultLink.href = authUrl;
           });
