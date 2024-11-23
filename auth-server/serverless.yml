@@ -23,7 +23,7 @@ frameworkVersion: "3"
 provider:
   name: aws
   runtime: nodejs18.x
-  region: us-east-1
+  region: us-east-2
   timeout: 30 #optional, in seconds, default is 6
   environment:
     CLIENT_ID: ${file(config.json):CLIENT_ID}
@@ -68,7 +68,7 @@ functions:
   getAuthURL:
     handler: handler.getAuthURL
     events:
-      -http:
+      - http:
         path: api/get-auth-url
         method: get
 #    The following are a few example events you can configure
