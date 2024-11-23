@@ -1,0 +1,21 @@
+{
+  "unknown": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.10",
+    "isWithinCompose": false,
+    "composeOrgName": null,
+    "composeServiceName": null,
+    "command": [],
+    "options": {},
+    "error": {
+      "message": "Failed to download and install template from https://github.com/serverless/examples/tree/v4/aws-node-http-api due to A folder named \"C:\\Users\\Admin\\Desktop\\CareerFoundry\\meet-app\\meet\\Meet-app\" already exists.",
+      "stack": "Error: Failed to download and install template from https://github.com/serverless/examples/tree/v4/aws-node-http-api due to A folder named \"C:\\Users\\Admin\\Desktop\\CareerFoundry\\meet-app\\meet\\Meet-app\" already exists.\n    at routeNew (file:///C:/Users/Admin/.serverless/releases/4.4.10/package/dist/sf-core.js:951:3563)\n    at async commandOnboarding (file:///C:/Users/Admin/.serverless/releases/4.4.10/package/dist/sf-core.js:951:2302)\n    at async catchAllHandler (file:///C:/Users/Admin/.serverless/releases/4.4.10/package/dist/sf-core.js:976:19772)\n    at async runCommand (file:///C:/Users/Admin/.serverless/releases/4.4.10/package/dist/sf-core.js:1010:10871)\n    at async route (file:///C:/Users/Admin/.serverless/releases/4.4.10/package/dist/sf-core.js:1010:13436)\n    at async Object.run2 [as run] (file:///C:/Users/Admin/.serverless/releases/4.4.10/package/dist/sf-core.js:1010:15182)\n    at async run3 (file:///C:/Users/Admin/.serverless/releases/4.4.10/package/dist/sf-core.js:1010:16442)"
+    },
+    "machineId": "1a387efb944af71b1b02a3d5ac975cb8",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
