@@ -22,7 +22,12 @@ describe("<Event /> component", () => {
   });
 
   test("renders event start time", () => {
-    const eventStartTime = EventComponent.queryByText(event.start.dateTime);
+    const eventStartTime = EventComponent.queryByText(event.created);
     expect(eventStartTime).toBeInTheDocument();
+  });
+
+  test("renders a 'show details' button", () => {
+    const showDetailsButton = EventComponent.queryByRole("button");
+    expect(showDetailsButton).toBeInTheDocument();
   });
 });
