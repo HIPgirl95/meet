@@ -27,7 +27,7 @@ describe("<Event /> component", () => {
   });
 
   test("renders a 'show details' button", () => {
-    const showDetailsButton = EventComponent.queryByRole("button");
+    const showDetailsButton = EventComponent.queryByText("Show Details");
     expect(showDetailsButton).toBeInTheDocument();
   });
 });

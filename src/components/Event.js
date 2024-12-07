@@ -5,7 +5,7 @@ const Event = ({ event }) => {
         <h2>{event.summary}</h2>
         <h4>{event.location}</h4>
         <h4>{event.created}</h4>
-        <button>Show details</button>
+        <button>Show Details</button>
       </div>
     </li>
   );
