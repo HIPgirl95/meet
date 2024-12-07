@@ -38,12 +38,17 @@ describe("<Event /> component", () => {
 
   test("shows the details section when the user clicks on the 'show details' button", async () => {
     const user = userEvent.setup();
-    const showDetailsButton =
-      EventComponent.container.querySelector(".details-button");
+    const showDetailsButton = EventComponent.queryByText("Show Details");
     await user.click(showDetailsButton);
     const EventDetails = EventComponent.container.querySelector(".details");
     expect(EventDetails).toBeInTheDocument();
   });
 
-  test("hides the details section when the user clicks on the 'hide details' button", async () => {});
+  test("hides the details section when the user clicks on the 'hide details' button", async () => {
+    const user = userEvent.setup();
+    const hideDetailsButton = EventComponent.queryByText("Hide Details");
+    await user.click(hideDetailsButton);
+    const EventDetails = EventComponent.container.querySelector(".details");
+    expect(EventDetails).not.toBeInTheDocument();
+  });
 });
