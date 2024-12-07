@@ -12,4 +12,8 @@ describe("<NumberOfEvents /> component", () => {
     expect(NumberOfEventsComponent.queryByRole("textbox")).toBeInTheDocument();
   });
 
+  test("Default number of events shown is 32", () => {
+    let textInput = NumberOfEventsComponent.queryByRole("textbox");
+    expect(textInput).toHaveValue("32");
+  });
 });
