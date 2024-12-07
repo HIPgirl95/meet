@@ -13,7 +13,14 @@ describe("<NumberOfEvents /> component", () => {
   });
 
   test("Default number of events shown is 32", () => {
-    let textInput = NumberOfEventsComponent.queryByRole("textbox");
+    const textInput = NumberOfEventsComponent.queryByRole("textbox");
     expect(textInput).toHaveValue("32");
+  });
+
+  test("NumberOfEvents value changes when user enters a new number", async () => {
+    const textInput = NumberOfEventsComponent.queryByRole("textbox");
+    const user = userEvent.setup();
+    await user.type(textInput, "{backspace}{backspace}10");
+    expect(textInput).toHaveValue("10");
   });
 });
