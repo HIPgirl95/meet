@@ -63,3 +63,5 @@ This app will eventually be a serverless, PWA with react using a TDD technique. 
    • Given a user wants to make conclusions about popularity of locations or event types</br>
    • When they access the data portion of the app</br>
    • Then the user can see a chart with the number of upcoming events in each city.
+
+change "test" in package.json to "test": "react-scripts test --coverage --watchAll" to run coverage tests
