@@ -5,7 +5,7 @@ describe("show/hide an event details", () => {
     const browser = await puppeteer.launch();
 
     const page = await browser.newPage();
-    await page.goto("http://localhost:5173"); //If your Vercel app is running in a different port, please update it here
+    await page.goto("http://localhost:3000"); //If your Vercel app is running in a different port, please update it here
 
     //if your event element has a different selector, use it instead of .event
     await page.waitForSelector(".event");
