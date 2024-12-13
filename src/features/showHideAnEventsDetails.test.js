@@ -2,7 +2,6 @@ import { render, waitFor, within } from "@testing-library/react";
 import { defineFeature, loadFeature } from "jest-cucumber";
 import App from "../App";
 import userEvent from "@testing-library/user-event";
-import { getEvents } from "../api";
 
 const feature = loadFeature("./src/features/showHideAnEventsDetails.feature");
 
@@ -74,10 +73,31 @@ defineFeature(feature, (test) => {
     when,
     then,
   }) => {
-    given("an event is expanded and showing more details", () => {});
+    let AppComponent;
+    let AppDOM;
+    let EventListDOM;
+    let eventDetails;
+    let showDetails;
+    given(
+      "an event has been clicked on and is showing more details",
+      async () => {
+        const user = userEvent.setup();
+        AppComponent = render(<App />);
+        AppDOM = AppComponent.container.firstChild;
+        EventListDOM = AppDOM.querySelector("#event-list");
+        showDetails = EventListDOM.querySelector(".details-button");
+        await user.click(showDetails);
+      }
+    );
 
-    when(/^use clicks "(.*)" on the event$/, (arg0) => {});
+    when("user clicks 'Hide details' on the event", async () => {
+      const user = userEvent.setup();
+      await user.click(showDetails);
+    });
 
-    then("the event will collapse to hide the details", () => {});
+    then("the event will collapse to hide the details", () => {
+      eventDetails = EventListDOM.querySelector(".details");
+      expect(eventDetails).not.toBeInTheDocument();
+    });
   });
 });
