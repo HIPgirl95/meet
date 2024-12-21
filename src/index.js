@@ -8,8 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 import * as atatus from "atatus-spa";
 atatus.config("26afc92e398e41fa9b472bcc5debed86").install();
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
