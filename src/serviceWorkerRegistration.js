@@ -23,7 +23,7 @@ const isLocalhost = Boolean(
 export function register(config) {
   if (process.env.NODE_ENV === "production" && "serviceWorker" in navigator) {
     window.addEventListener("load", () => {
-      const swUrl = "/service-worker.js";
+      const swUrl = "/meet/src/service-worker.js";
 
       if (isLocalhost) {
         // Check if a service worker still exists or not.
