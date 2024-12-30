@@ -7,6 +7,7 @@ import { InfoAlert, ErrorAlert, WarningAlert } from "./components/Alert";
 
 import "./App.css";
 import CityEventsChart from "./components/CityEventsChart";
+import EventGenresChart from "./components/EventGenresChart";
 
 const App = () => {
   const [events, setEvents] = useState([]);
@@ -61,6 +62,7 @@ const App = () => {
         setErrorAlert={setErrorAlert}
       />
       <div className="charts-container">
+        <EventGenresChart events={events} />
         <CityEventsChart allLocations={allLocations} events={events} />
       </div>
       <EventList events={events} />
