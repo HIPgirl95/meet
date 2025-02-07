@@ -1,67 +1,55 @@
-<h1>Meet App - Using CRA</h1>
+# Event Location App
 
-This app will eventually be a serverless, PWA with react using a TDD technique. The application will use the Google Calendar API to fetch upcoming events. It will then allow users to navigate events via city and find details about them.
+This is a React-based app that allows users to view events based on their location. Users can filter events by city, adjust the number of events displayed, and view charts for event genres and city-specific events.
 
-<h2>Features - User Stories and Gherkin's syntax</h2>
+## Features
 
-1. As a USER, I should be able to FILTER EVENTS BY CITY, so that I can VIEW A LIST OF AVAILABLE EVENTS IN THAT CITY. </br>
-   Scenario 1.</br>
-   • Given the user hasn’t searched for any city</br>
-   • When the user opens the app</br>
-   • Then the user should see a list of upcoming events</br>
-   Scenario 2.</br>
-   • Given the main page is open</br>
-   • When the user starts typing in the city textbox</br>
-   • Then the user should receive a list of cities (suggestions) that match what they’ve typed</br>
-   Scenario 3.</br>
-   • Given user was typing “Berlin” in the city textbox AND the list of suggested cities is showing</br>
-   • When the user selects a city from the list,</br>
-   • Then their city should be changed to that city AND the user should receive a list of upcoming events in that city.</br></br>
+- **City Search**: Search for events in a specific city or view events across all cities.
+- **Event List**: Displays a list of events based on the selected city and number of events.
+- **Charts**: Visual charts to represent event data, including event genres and city-specific event statistics.
+- **Responsive Alerts**: Displays info, error, and warning alerts based on app status and user actions.
 
-2. As a USER, I should be able to SHOW/HIDE EVENT DETAILS, so that I can LEARN MORE INFORMATION ABOUT THE EVENTS THAT INTEREST ME</br>
-   Scenario 1.</br>
-   • Given the list of events is displayed</br>
-   • When a user looks at the list</br>
-   • Then the events should be collapsed and only display basic information</br>
-   Scenario 2.</br>
-   • Given the list of events is displayed</br>
-   • When the user clicks “expand” or “show more” on an event</br>
-   • Then the event will expand to give more details</br>
-   Scenario 3.</br>
-   • Given an event is expanded and showing more details</br>
-   • When the user clicks “show less”</br>
-   • Then the event will collapse and hide extra details</br></br>
+## Installation
 
-3. As a USER, I should be able to SPECIFY NUMBER OF EVENTS, so that I can TAILOR MY VIEWING PREFRENCES AS DESIRED</br>
-   Scenario 1.</br>
-   • Given the list of events is displayed</br>
-   • When the user hasn’t specified a number of events to display</br>
-   • Then the default number of events, 32, will be displayed</br>
-   Scenario 2.</br>
-   • Given the list of events is displayed</br>
-   • When the user specifies a number of events to display</br>
-   • Then only that number of events will be displayed</br></br>
+### 1. Clone the repository
+Clone this repository to your local machine using the following command:
+`
+git clone https://github.com/your-username/event-location-app.git `
 
-4. As a USER, I should be able to USE THE APP WHEN OFFLINE, so that I can FIND EVENTS TO GO TO EVEN WHEN I HAVE NO OR LIMITED INTERNET CONNECTION</br>
-   Scenario 1.</br>
-   • Given user has opened the app without an internet connection</br>
-   • When the user attempts to view cached data</br>
-   • Then cached data will be displayed</br>
-   Scenario 2.</br>
-   • Given user has opened the app without an internet connection</br>
-   • When the user attempts to change search settings (display new information)</br>
-   • Then an error message will be displayed</br></br>
+### 2. Install dependencies
+Navigate to the project directory and install the necessary dependencies:
+`
+npm install`
 
-5. As a USER, I should be able to ADD AN APP SHORTCUT TO THE HOME SCREEN, so that I CAN EASILY ACCESS THE APP</br>
-   Scenario 1.</br>
-   • Given a user wants to access the app faster and more frequently</br>
-   • When they install the app as a shortcut</br>
-   • Then they will be able to access the app from their device home screen</br></br>
+### 3. Run the app
+Once the dependencies are installed, start the app using:
+`
+npm start`
 
-6. As a USER, I should be able to VIEW CHARTS VISUALIZING EVENT DETAILS, so that I can SEE WHERE AND WHAT KIND OF EVENTS ARE MOST POPULAR</br>
-   Scenario 1.</br>
-   • Given a user wants to make conclusions about popularity of locations or event types</br>
-   • When they access the data portion of the app</br>
-   • Then the user can see a chart with the number of upcoming events in each city.
+## Usage
 
-change "test" in package.json to "test": "react-scripts test --coverage --watchAll" to run coverage tests
+### City Search
+Use the city search input to filter events by location. You can either search for specific cities or select "See all cities" to display events from all available locations.
+
+### Number of Events
+You can adjust the number of events displayed by using the slider in the "Number of Events" section.
+
+### Event Charts
+- **Event Genres Chart**: View the distribution of event genres.
+- **City Events Chart**: See how many events are available in each city.
+
+### Alerts
+The app will display alerts based on various conditions:
+- **Info Alert**: Displays general informational messages.
+- **Error Alert**: Alerts the user of any errors.
+- **Warning Alert**: Displays a warning message if the user is not connected to the internet.
+
+## Dependencies
+
+- React
+- React Router
+- axios (for API calls)
+
+### Documentation
+
+This documentation has been enhanced by AI
